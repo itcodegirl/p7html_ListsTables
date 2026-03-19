@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lists & Tables — CodeHerWay</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<nav class="chw-nav">
+		<a href="#" class="chw-nav__logo">Code<span>Her</span>Way</a>
+		<span class="chw-nav__tag">HTML Foundations</span>
+	</nav>
+
+	<header class="article-hero">
+		<div class="article-hero__inner">
+			<p class="article-hero__series">Article 7 of 10 — HTML Foundations</p>
+			<h1 class="article-hero__title">Lists & Tables</h1>
+			<p class="article-hero__subtitle">Organize your content like a pro. Learn ordered lists, unordered lists, nested
+				lists, and how to build accessible data tables.</p>
+			<div class="article-hero__meta">
+				<span>📖 11 min read</span>
+				<span>🟢 Beginner</span>
+			</div>
+		</div>
+	</header>
+
+	<main class="article-body">
+
+		<nav class="toc">
+			<p class="toc__title">In This Article</p>
+			<ol>
+				<li><a href="#unordered">Unordered Lists</a></li>
+				<li><a href="#ordered">Ordered Lists</a></li>
+				<li><a href="#nested">Nested Lists</a></li>
+				<li><a href="#description">Description Lists</a></li>
+				<li><a href="#tables-basics">Tables: The Basics</a></li>
+				<li><a href="#tables-advanced">Tables: Headers, Captions & Structure</a></li>
+				<li><a href="#tables-warning">When NOT to Use Tables</a></li>
+				<li><a href="#challenge">Mini Challenge</a></li>
+			</ol>
+		</nav>
+
+		<h2 id="unordered">Unordered Lists</h2>
+
+		<p>An unordered list displays items with bullet points. Order doesn't matter — a grocery list, a set of features, a
+			navigation menu. Use <code>&lt;ul&gt;</code> for the list and <code>&lt;li&gt;</code> for each item:</p>
+
+		<div class="code-block">
+			<div class="code-block__header">
+				<div class="code-block__dots"><span></span><span></span><span></span></div>
+				<span>unordered list</span>
+			</div>
+			<pre><code><span class="hl-tag">&lt;h3&gt;</span>Skills I'm Learning<span class="hl-tag">&lt;/h3&gt;</span>
+<span class="hl-tag">&lt;ul&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>HTML<span class="hl-tag">&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>CSS<span class="hl-tag">&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>JavaScript<span class="hl-tag">&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>React<span class="hl-tag">&lt;/li&gt;</span>
+<span class="hl-tag">&lt;/ul&gt;</span></code></pre>
+		</div>
+
+		<div class="output-preview">
+			<p class="output-preview__label">What the browser shows</p>
+			<h3 style="font-size:1.1rem; margin-bottom:0.5rem; font-family:serif;">Skills I'm Learning</h3>
+			<ul style="font-family:serif; margin-left:1.5rem;">
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JavaScript</li>
+				<li>React</li>
+			</ul>
+		</div>
+
+		<h2 id="ordered">Ordered Lists</h2>
+
+		<p>An ordered list displays items with numbers. Use <code>&lt;ol&gt;</code> when sequence matters — steps in a
+			recipe, ranking, instructions:</p>
+
+		<div class="code-block">
+			<div class="code-block__header">
+				<div class="code-block__dots"><span></span><span></span><span></span></div>
+				<span>ordered list</span>
+			</div>
+			<pre><code><span class="hl-tag">&lt;h3&gt;</span>How to Make Coffee<span class="hl-tag">&lt;/h3&gt;</span>
+<span class="hl-tag">&lt;ol&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>Boil water<span class="hl-tag">&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>Grind the beans<span class="hl-tag">&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>Pour water over grounds<span class="hl-tag">&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>Wait 4 minutes<span class="hl-tag">&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>Enjoy!<span class="hl-tag">&lt;/li&gt;</span>
+<span class="hl-tag">&lt;/ol&gt;</span></code></pre>
+		</div>
+
+		<p>You can customize the starting number and even the numbering type:</p>
+
+		<div class="code-block">
+			<div class="code-block__header">
+				<div class="code-block__dots"><span></span><span></span><span></span></div>
+				<span>ordered list options</span>
+			</div>
+			<pre><code><span class="hl-comment">&lt;!-- Start counting from 5 --&gt;</span>
+<span class="hl-tag">&lt;ol</span> <span class="hl-attr">start</span>=<span class="hl-val">"5"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>This is item 5<span class="hl-tag">&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>This is item 6<span class="hl-tag">&lt;/li&gt;</span>
+<span class="hl-tag">&lt;/ol&gt;</span>
+
+<span class="hl-comment">&lt;!-- Use letters instead of numbers --&gt;</span>
+<span class="hl-tag">&lt;ol</span> <span class="hl-attr">type</span>=<span class="hl-val">"A"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>First (A)<span class="hl-tag">&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>Second (B)<span class="hl-tag">&lt;/li&gt;</span>
+<span class="hl-tag">&lt;/ol&gt;</span>
+
+<span class="hl-comment">&lt;!-- Roman numerals --&gt;</span>
+<span class="hl-tag">&lt;ol</span> <span class="hl-attr">type</span>=<span class="hl-val">"I"</span><span class="hl-tag">&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>Chapter I<span class="hl-tag">&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>Chapter II<span class="hl-tag">&lt;/li&gt;</span>
+<span class="hl-tag">&lt;/ol&gt;</span></code></pre>
+		</div>
+
+		<h2 id="nested">Nested Lists</h2>
+
+		<p>Lists can contain other lists. This is super useful for sub-items, categories, and multi-level navigation:</p>
+
+		<div class="code-block">
+			<div class="code-block__header">
+				<div class="code-block__dots"><span></span><span></span><span></span></div>
+				<span>nested lists</span>
+			</div>
+			<pre><code><span class="hl-tag">&lt;ul&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>Frontend
+    <span class="hl-tag">&lt;ul&gt;</span>
+      <span class="hl-tag">&lt;li&gt;</span>HTML<span class="hl-tag">&lt;/li&gt;</span>
+      <span class="hl-tag">&lt;li&gt;</span>CSS<span class="hl-tag">&lt;/li&gt;</span>
+      <span class="hl-tag">&lt;li&gt;</span>JavaScript<span class="hl-tag">&lt;/li&gt;</span>
+    <span class="hl-tag">&lt;/ul&gt;</span>
+  <span class="hl-tag">&lt;/li&gt;</span>
+  <span class="hl-tag">&lt;li&gt;</span>Backend
+    <span class="hl-tag">&lt;ul&gt;</span>
+      <span class="hl-tag">&lt;li&gt;</span>Node.js<span class="hl-tag">&lt;/li&gt;</span>
+      <span class="hl-tag">&lt;li&gt;</span>Python<span class="hl-tag">&lt;/li&gt;</span>
+    <span class="hl-tag">&lt;/ul&gt;</span>
+  <span class="hl-tag">&lt;/li&gt;</span>
+<span class="hl-tag">&lt;/ul&gt;</span></code></pre>
+		</div>
+
+		<div class="callout callout--warning">
+			<p>The nested <code>&lt;ul&gt;</code> must go <strong>inside</strong> the parent <code>&lt;li&gt;</code>, not
+				after it. A common mistake is closing the <code>&lt;li&gt;</code> before adding the nested list. The inner list
+				is content <em>of</em> that list item.</p>
+		</div>
+
+		<h2 id="description">Description Lists</h2>
+
+		<p>There's a third type of list most beginners don't know about: the <strong>description list</strong>. It pairs
+			terms with their definitions:</p>
+
+		<div class="code-block">
+			<div class="code-block__header">
+				<div class="code-block__dots"><span></span><span></span><span></span></div>
+				<span>description list</span>
+			</div>
+			<pre><code><span class="hl-tag">&lt;dl&gt;</span>
+  <span class="hl-tag">&lt;dt&gt;</span>HTML<span class="hl-tag">&lt;/dt&gt;</span>
+  <span class="hl-tag">&lt;dd&gt;</span>HyperText Markup Language — the structure of web pages.<span class="hl-tag">&lt;/dd&gt;</span>
+
+  <span class="hl-tag">&lt;dt&gt;</span>CSS<span class="hl-tag">&lt;/dt&gt;</span>
+  <span class="hl-tag">&lt;dd&gt;</span>Cascading Style Sheets — the visual styling of web pages.<span class="hl-tag">&lt;/dd&gt;</span>
+
+  <span class="hl-tag">&lt;dt&gt;</span>JS<span class="hl-tag">&lt;/dt&gt;</span>
+  <span class="hl-tag">&lt;dd&gt;</span>JavaScript — the behavior and interactivity of web pages.<span class="hl-tag">&lt;/dd&gt;</span>
+<span class="hl-tag">&lt;/dl&gt;</span></code></pre>
+		</div>
+
+		<p><code>&lt;dl&gt;</code> is the list container, <code>&lt;dt&gt;</code> is the term, and <code>&lt;dd&gt;</code>
+			is the description. Great for glossaries, FAQs, and metadata displays.</p>
+
+		<h2 id="tables-basics">Tables: The Basics</h2>
+
+		<p>Tables organize data into rows and columns. They're built with a handful of tags that you'll pick up quickly:</p>
+
+		<div class="code-block">
+			<div class="code-block__header">
+				<div class="code-block__dots"><span></span><span></span><span></span></div>
+				<span>basic table</span>
+			</div>
+			<pre><code><span class="hl-tag">&lt;table&gt;</span>
+  <span class="hl-tag">&lt;tr&gt;</span>
+    <span class="hl-tag">&lt;td&gt;</span>Row 1, Cell 1<span class="hl-tag">&lt;/td&gt;</span>
+    <span class="hl-tag">&lt;td&gt;</span>Row 1, Cell 2<span class="hl-tag">&lt;/td&gt;</span>
+    <span class="hl-tag">&lt;td&gt;</span>Row 1, Cell 3<span class="hl-tag">&lt;/td&gt;</span>
+  <span class="hl-tag">&lt;/tr&gt;</span>
+  <span class="hl-tag">&lt;tr&gt;</span>
+    <span class="hl-tag">&lt;td&gt;</span>Row 2, Cell 1<span class="hl-tag">&lt;/td&gt;</span>
+    <span class="hl-tag">&lt;td&gt;</span>Row 2, Cell 2<span class="hl-tag">&lt;/td&gt;</span>
+    <span class="hl-tag">&lt;td&gt;</span>Row 2, Cell 3<span class="hl-tag">&lt;/td&gt;</span>
+  <span class="hl-tag">&lt;/tr&gt;</span>
+<span class="hl-tag">&lt;/table&gt;</span></code></pre>
+		</div>
+
+		<p>The building blocks:</p>
+		<ul>
+			<li><code>&lt;table&gt;</code> — The table container</li>
+			<li><code>&lt;tr&gt;</code> — Table Row (one horizontal row)</li>
+			<li><code>&lt;td&gt;</code> — Table Data (one cell)</li>
+		</ul>
+
+		<h2 id="tables-advanced">Tables: Headers, Captions & Structure</h2>
+
+		<p>A proper, accessible table uses header cells and structural sections:</p>
+
+		<div class="code-block">
+			<div class="code-block__header">
+				<div class="code-block__dots"><span></span><span></span><span></span></div>
+				<span>well-structured table</span>
+			</div>
+			<pre><code><span class="hl-tag">&lt;table&gt;</span>
+  <span class="hl-tag">&lt;caption&gt;</span>Q1 Sales Results<span class="hl-tag">&lt;/caption&gt;</span>
+
+  <span class="hl-tag">&lt;thead&gt;</span>
+    <span class="hl-tag">&lt;tr&gt;</span>
+      <span class="hl-tag">&lt;th&gt;</span>Month<span class="hl-tag">&lt;/th&gt;</span>
+      <span class="hl-tag">&lt;th&gt;</span>Revenue<span class="hl-tag">&lt;/th&gt;</span>
+      <span class="hl-tag">&lt;th&gt;</span>Growth<span class="hl-tag">&lt;/th&gt;</span>
+    <span class="hl-tag">&lt;/tr&gt;</span>
+  <span class="hl-tag">&lt;/thead&gt;</span>
+
+  <span class="hl-tag">&lt;tbody&gt;</span>
+    <span class="hl-tag">&lt;tr&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span>January<span class="hl-tag">&lt;/td&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span>$12,000<span class="hl-tag">&lt;/td&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span>+5%<span class="hl-tag">&lt;/td&gt;</span>
+    <span class="hl-tag">&lt;/tr&gt;</span>
+    <span class="hl-tag">&lt;tr&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span>February<span class="hl-tag">&lt;/td&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span>$14,500<span class="hl-tag">&lt;/td&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span>+20%<span class="hl-tag">&lt;/td&gt;</span>
+    <span class="hl-tag">&lt;/tr&gt;</span>
+    <span class="hl-tag">&lt;tr&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span>March<span class="hl-tag">&lt;/td&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span>$13,800<span class="hl-tag">&lt;/td&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span>-5%<span class="hl-tag">&lt;/td&gt;</span>
+    <span class="hl-tag">&lt;/tr&gt;</span>
+  <span class="hl-tag">&lt;/tbody&gt;</span>
+
+  <span class="hl-tag">&lt;tfoot&gt;</span>
+    <span class="hl-tag">&lt;tr&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span>Total<span class="hl-tag">&lt;/td&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span>$40,300<span class="hl-tag">&lt;/td&gt;</span>
+      <span class="hl-tag">&lt;td&gt;</span>—<span class="hl-tag">&lt;/td&gt;</span>
+    <span class="hl-tag">&lt;/tr&gt;</span>
+  <span class="hl-tag">&lt;/tfoot&gt;</span>
+<span class="hl-tag">&lt;/table&gt;</span></code></pre>
+		</div>
+
+		<p>Here's what each new element does:</p>
+		<ul>
+			<li><code>&lt;caption&gt;</code> — A title/description for the table (great for accessibility)</li>
+			<li><code>&lt;thead&gt;</code> — Groups the header row(s)</li>
+			<li><code>&lt;tbody&gt;</code> — Groups the body data rows</li>
+			<li><code>&lt;tfoot&gt;</code> — Groups the footer row(s) (totals, summaries)</li>
+			<li><code>&lt;th&gt;</code> — Table Header cell (bold and centered by default; tells screen readers this is a
+				header)</li>
+		</ul>
+
+		<div class="callout callout--tip">
+			<p>Always use <code>&lt;th&gt;</code> for header cells instead of bolding regular <code>&lt;td&gt;</code> cells.
+				Screen readers announce <code>&lt;th&gt;</code> as headers, which helps visually impaired users understand the
+				table structure.</p>
+		</div>
+
+		<h2 id="tables-warning">When NOT to Use Tables</h2>
+
+		<p>This is important: <strong>tables are for data, not for page layout.</strong></p>
+
+		<p>Back in the early days of the web (late '90s, early 2000s), developers used tables to create multi-column page
+			layouts. This is now considered a terrible practice because it creates inaccessible, fragile, hard-to-maintain
+			code. CSS handles layout now — specifically Flexbox and Grid.</p>
+
+		<p>Use a table when you have <em>tabular data</em>: schedules, comparison charts, stats, pricing. Don't use it to
+			arrange your navigation, sidebar, and content area.</p>
+
+		<div class="callout callout--info">
+			<p>A good test: if your content would make sense in a spreadsheet, it belongs in a table. If not, use a different
+				HTML structure and style it with CSS.</p>
+		</div>
+
+		<div class="challenge" id="challenge">
+			<p class="challenge__title">🏆 Mini Challenge</p>
+			<p>Create a "Course Catalog" page with:</p>
+			<ol>
+				<li>An unordered list of web development topics (Frontend, Backend, Design)</li>
+				<li>Nested lists under each topic with specific technologies</li>
+				<li>A description list defining three HTML-related terms of your choice</li>
+				<li>A fully structured table comparing 3 programming languages with columns for: Language, Difficulty, Best For,
+					and Year Created. Include <code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>,
+					<code>&lt;tbody&gt;</code>, and <code>&lt;th&gt;</code> elements</li>
+			</ol>
+		</div>
+
+		<nav class="article-nav">
+			<a href="06-images-and-media.html">
+				<p class="article-nav__label">← Previous</p>
+				<p class="article-nav__title">Images & Media</p>
+			</a>
+			<a href="08-semantic-html.html">
+				<p class="article-nav__label">Next Article →</p>
+				<p class="article-nav__title">Semantic HTML</p>
+			</a>
+		</nav>
+
+	</main>
+
+	<footer class="chw-footer">
+		<p>Code<span>Her</span>Way — Learn to code. Your way. No gatekeeping.</p>
+	</footer>
+
+</body>
+
+</html>
